@@ -1,0 +1,51 @@
+{
+  "banMenh": {
+    "Sơn Đầu Hỏa": "Dữ liệu đang cập nhật...",
+    "Lộ Bàng Thổ": "Người mang mệnh Lộ Bàng Thổ thường có tính cách vững vàng, kiên nhẫn..."
+  },
+  "cung": {
+    "Mệnh": {
+
+      "Vũ Khúc, Thiên Phủ":" Vũ Khúc thủ Mệnh đứng bên Thiên Phủ là một cách kết cấu khác hẳn. Vũ Khúc phải phấn đấu để có tiền, Thiên Phủ vận dụng năng lực để quản thủ tiền. Nếu được các sao tốt phù trì cách này là cách làm giàu, buôn bán kinh doanh rất hợp",
+
+      "Vũ Khúc": "Mệnh có sao Vũ khúc là người giỏi sách lược, nhiều tài , giỏi văn phong chữ nghĩa",
+
+      "Thiên Phủ": "I. TƯỚNG MẠO & TÍNH TÌNH\n Tướng mạo: Ngũ hành thuộc Thổ, chủ sự vuông vức đầy đặn. Người có Thiên Phủ thường da trắng, mặt tròn vuông, dáng vẻ béo tốt, phúc hậu. Nữ giới thì đoan trang, răng đều đẹp, cốt cách sang giàu. Chỉ khi gặp Tuần Triệt, Không Kiếp sắc mặt mới kém tươi nhuận, kém đầy đặn.\n Tính tình: Khoan hòa, nhân hậu, cẩn trọng, kín đáo và có mưu cơ. Là người đam mê tiền bạc, thích hưởng thụ nhưng quản lý tài chính rất khoa học. Có tính 'Lệnh tinh', thích ra lệnh cho người khác chứ không chịu sự sai bảo. TÀI LỘC & PHÚC THỌ\nLà sao cai quản quốc khố, đi đến đâu cũng được giao giữ tiền, là trung tâm chú ý"
+    },
+
+    
+    "Thất Sát": "..."
+  },
+  "sao": { },
+  "toHopSao": [
+    {
+      "dieuKien": ["Thiên Phủ", "Địa Không"],
+      "tenCachCuc": "Cách cục KHO TRỐNG",
+      "luanGiai": "CẢNH BÁO: Thiên Phủ gặp Địa Không tạo thành cách cục 'Kho Trống'. Người này dễ dùng thủ đoạn bất chính để tranh đoạt, bề ngoài hài hòa nhưng nội tâm mưu mô, dễ rơi vào cảnh cô lập, làm bao nhiêu hư hao bấy nhiêu."
+    },
+
+    {
+      "dieuKien": ["Thiên Phủ", "Đào Hoa"],
+      "tenCachCuc": "Thiên phủ Đào hoa",
+      "luanGiai": " Là người có sức hút ghê gớm cả về tài năng và nhan sắc. Là người thông minh, học hành giỏi giang chăm chỉ, tư duy tốt, viết vẽ giỏi, tự tin làm chủ trước đám đông, khả năng ăn nói lưu loát, linh hoạt, ngoại hình đẹp, dễ mến.Người có sao Đào Hoa tại mệnh thì không thích và không chịu được sự cảnh cô đơn, không bao giờ ngồi yên được một chỗ lâu dài, phải ra ngoài đường, phải đi giao lưu giao tiếp. Một khi ra ngoài thì sự Đào Hoa phát lộ, nhiều người để ý, tán tỉnh, sự thu hút người khác phái, vì thế trong lương duyên luôn phải chịu nghịch cảnh, khó khăn sóng gió trong chuyện tình cảm."
+    },
+
+
+
+    {
+      "dieuKien": ["Thiên Phủ", "Thiên Không"],
+      "tenCachCuc": "Cách cục KHO TRỐNG",
+      "luanGiai": "CẢNH BÁO: Thiên Phủ gặp Thiên Không là cách cục 'Kho Trống'. Mọi mưu sự dễ thành ảo ảnh, cần tu tâm dưỡng tính, tránh tham lam vô độ."
+    },
+    {
+      "dieuKien": ["Thiên Phủ", "Lộc Tồn"],
+      "tenCachCuc": "Cách cục KHO ĐẦY (Phú Quý)",
+      "luanGiai": "ĐẠI CÁT: Thiên Phủ hội cùng Lộc Tồn ví như 'Kho tiền đầy ắp'. Đây là người có năng lực quản lý tài chính xuất chúng, giàu có, cả đời không lo thiếu thốn."
+    },
+    {
+      "dieuKien": ["Thất Sát", "Kình Dương"],
+      "tenCachCuc": "Thất Sát Kình Dương",
+      "luanGiai": "Lưu ý: Thất Sát vốn đã mạnh mẽ, nay hội cùng Kình Dương thì tính cách cực kỳ quyết liệt, táo bạo. Dễ làm ăn lớn nhưng cũng dễ gặp tai nạn thương tích hoặc vướng pháp lý."
+    }
+  ]
+}

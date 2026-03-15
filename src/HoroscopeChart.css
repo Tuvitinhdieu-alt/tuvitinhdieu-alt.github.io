@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700&display=swap');
+
+:root {
+  --chart-line-width: 1px;
+}
+
+.horoscope-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  width: 900px;
+  min-width: 900px;
+  height: 1248px;
+  box-sizing: border-box;
+  border: 0px solid #000000;
+  margin: 0 auto;
+}
+
+.horoscope-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #e5e4e0;
+  border-top: var(--chart-line-width) solid #000000;
+  border-left: var(--chart-line-width) solid #000000;
+  box-sizing: border-box;
+}
+
+.palace {
+  border: none;
+  border-right: var(--chart-line-width) solid #000000;
+  border-bottom: var(--chart-line-width) solid #000000;
+  background-color: #e5e4e0;
+  padding: 5px;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.cung-item {
+  border: 0px solid rgba(0, 0, 0, 0.2);
+  background: rgba(207, 33, 33, 0.02);
+  position: relative;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.cung-chinh-label {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px; /* Đã đổi sang px cho dễ chỉnh */
+  color: #000000;
+  z-index: 2;
+}
+
+.main-stars-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  margin-top: 20px;
+  z-index: 1;
+}
+
+.main-star-item {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.1;
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+.main-star-with-nienhoa {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.main-star-label {
+  display: inline-block;
+}
+
+.nienhoa-list {
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.nienhoa-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  border: 2px solid #ef4444;
+  color: #ef4444;
+  background: transparent;
+  display: inline-grid;
+  place-items: center;
+  font-size: 20px;
+  font-family: 'Be Vietnam Pro', 'Noto Sans', Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  padding: 0;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.nienhoa-badge-text {
+  display: block;
+  line-height: 1;
+}
+
+.nienhoa-badge-text--c {
+  transform: translateX(0.35px);
+}
+
+.nienhoa-badge-text--abd {
+  transform: translateY(-1.6px);
+}
+
+.trang-sinh-star {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+.thai-tue-year-seq {
+  position: absolute;
+  bottom: 34px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1;
+  letter-spacing: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 4px;
+  box-sizing: border-box;
+}
+
+.luu-thai-tue-star {
+  position: absolute;
+  bottom: 28px;
+  left: 8px;
+  right: 8px;
+  width: auto;
+  text-align: left;
+  padding-left: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+.tieu-han-star {
+  position: absolute;
+  bottom: 8px;
+  left: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+.thang-han-star {
+  position: absolute;
+  bottom: 8px;
+  right: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+.tieu-han-active {
+  border: 2px solid #d32f2f;
+  border-radius: 4px;
+  padding: 1px 3px;
+  display: inline-block;
+}
+
+.sub-stars-container {
+  position: absolute;
+  top: 78px;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 35px 0 5px;
+  min-height: 50px;
+  z-index: 1;
+}
+
+.sub-stars-left, .sub-stars-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.sub-star-item.l-thai-tue {
+  font-weight: bold;
+}
+
+.sub-star-item.l-luu-good {
+  font-weight: bold;
+}
+
+.sub-star-item.l-thai-tue {
+  font-size: 0.9rem;
+}
+
+.sub-stars-left {
+  align-items: flex-start;
+}
+
+.sub-stars-right {
+  position: relative;
+  left: 10px;
+  align-items: flex-start;
+}
+
+.sub-star-item {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.sub-star-item {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  
+}
+
+.sub-star-item.bad-star {
+  color: #d32f2f;
+}
+
+.center-info {
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+  z-index: 5;
+  background-color: #e5e4e0;
+  border-right: var(--chart-line-width) solid #000000;
+  border-bottom: var(--chart-line-width) solid #000000;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.thien-ban-content {
+  width: 100%;
+  margin-top: 34px;
+}
+
+.chart-title {
+  color: #1500ff;
+  text-transform: uppercase;
+  margin-top: 4px;
+  margin-bottom: 6px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.chart-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.chart-top-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-top {
+  color: #1144cc;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 2rem;
+  margin: 0 0 6px 0;
+  font-weight: 800;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.chart-divider {
+  height: 1px;
+  background-color: #1144cc;
+  width: 100%;
+  margin: 4px 0 6px 0;
+}
+
+.info-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+}
+
+.info-row {
+  display: grid;
+  grid-template-columns: 120px 1fr 140px;
+  gap: 8px;
+  align-items: center;
+}
+
+.main-info-shift-right {
+  transform: translateX(22px);
+}
+
+.nam-han-row {
+  margin-top: 12px;
+}
+
+.info-label {
+  font-weight: 700;
+  color: #0b2b57;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.info-value {
+  color: #1144cc;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.95rem;
+}
+
+.info-canChi {
+  color: #0b3a80;
+  font-weight: 700;
+  text-align: left;
+  justify-self: start;
+  padding-left: 6px;
+  white-space: nowrap;
+  font-size: 0.95rem;
+}
+
+
+
+.dia-chi-corner {
+  font-size: 0.8rem;
+  white-space: nowrap;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 3;
+}
+
+.dai-van-corner {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #000;
+  z-index: 3;
+}
+
+.dai-van-corner--active {
+  border: 2px solid #000000;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+
+
+.tuan-triet-label {
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 6px;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.tuhoa-badge {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #d32f2f;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  z-index: 11;
+}
+
+.tuhoa-overlay line {
+  stroke: #d32f2f;
+  stroke-width: 2px;
+}
+
+.tuhoa-overlay text {
+  fill: #d32f2f;
+  font-weight: 700;
+}
+
+.download-btn {
+  background: #1144cc;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.download-btn:hover { opacity: 0.95; }
+
+.export-wrapper {
+    background-color: #fdfdfd; 
+    
+    /* Optimized for export with arrow space */
+    padding: 40px 40px 40px 40px; 
+    
+    display: inline-block; 
+    box-sizing: border-box; 
+    text-align: left; 
+    position: relative;
+}
+
+.chart-watermark-center {
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  transform: translateX(-50%);
+  font-size: 14px;
+  font-weight: 700;
+  color: #1144cc;
+  letter-spacing: 0.2px;
+}

@@ -1,0 +1,697 @@
+html, body, #root, .app-page {
+  min-width: min-content; /* Ép toàn bộ nền, header, footer phải giãn ra bằng nội dung to nhất */
+  margin: 0;
+  padding: 0;
+  overflow-x: visible; /* Cho phép tràn màn hình để vuốt */
+}
+
+.app-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header-top {
+  background:
+    radial-gradient(circle at 14% 24%, rgba(255, 230, 170, 0.26), transparent 36%),
+    linear-gradient(118deg, #03284a, #06487a 44%, #0c6fa8 78%, #0b5c8c);
+  color: #fff;
+  isolation: isolate;
+}
+
+.site-header-inner {
+  width: min(1400px, calc(100% - 28px));
+  margin: 0 auto;
+}
+
+.site-header-top .site-header-inner {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+}
+
+.header-logo-shell {
+  width: 164px;
+  height: 164px;
+  border-radius: 26px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(6px);
+}
+
+.header-logo-img {
+  width: 82%;
+  height: 82%;
+  object-fit: contain;
+  border-radius: 16px;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
+.header-brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.header-brand-kicker {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 30px;
+  border-radius: 999px;
+  padding: 0 14px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  color: #ffe4a8;
+  border: 1px solid rgba(255, 225, 160, 0.52);
+  background: rgba(255, 216, 137, 0.14);
+}
+
+.header-brand-title {
+  font-size: clamp(2.15rem, 3.2vw, 3.25rem);
+  font-weight: 800;
+  line-height: 0.98;
+  color: #ffffff;
+  letter-spacing: 0.2px;
+}
+
+.header-brand-subline {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #d8ebff;
+}
+
+.site-brand {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.site-brand-logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.site-brand-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
+.site-brand-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2px;
+  margin-bottom: 30px;
+  width: max-content;
+}
+
+.site-brand-toprow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+}
+
+.site-brand-topline {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #dbeafe;
+  line-height: 1;
+}
+
+.site-brand-title {
+  font-size: 3.9rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 0.95;
+  white-space: nowrap;
+}
+
+.site-brand-owner {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #e2e8f0;
+  margin-bottom: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 8px;
+  background: rgba(1, 26, 47, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.site-nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 9px 14px;
+  border-radius: 999px;
+}
+
+.site-nav-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.site-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-chip {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  background: rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.social-chip:hover {
+  background: rgba(0, 0, 0, 0.34);
+}
+
+.header-cta-btn {
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(130deg, #ffe8b9, #ffd277);
+  color: #173f68;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 10px 16px;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+}
+
+.site-news-strip {
+  background: linear-gradient(90deg, #f8fbff, #eef6ff 36%, #f9fcff);
+  border-bottom: 1px solid #d2e5f8;
+}
+
+.site-news-inner {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.news-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  border-radius: 999px;
+  padding: 0 12px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+  background: #123f74;
+}
+
+.news-link {
+  color: #0d3f75;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0 12px;
+  background: #ffffff;
+  border: 1px solid #d8e8f8;
+}
+
+.news-link:hover {
+  background: #f2f8ff;
+}
+
+.main-content {
+  width: min(1400px, calc(100% - 28px));
+  margin: 20px auto 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-card-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.chart-area {
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.chart-area > div {
+  background-color: transparent !important;
+  min-height: auto !important;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-empty-state {
+  min-height: 200px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  background: #fff;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  color: #475569;
+}
+
+.chart-empty-state h3 {
+  margin: 0 0 6px;
+  color: #0f172a;
+}
+
+.chart-empty-state p {
+  margin: 0;
+}
+
+.site-footer {
+  margin-top: auto;
+  background:
+    radial-gradient(circle at 16% 20%, rgba(255, 214, 112, 0.22), transparent 34%),
+    linear-gradient(120deg, #012f57, #024a82 44%, #0a5f9d 78%, #094a7a);
+  color: #fff;
+  isolation: isolate;
+  border-top: 1px solid rgba(255, 224, 153, 0.36);
+}
+
+.site-footer-inner {
+  width: min(1400px, calc(100% - 28px));
+  margin: 0 auto;
+  min-height: 300px;
+  display: grid;
+  grid-template-columns: 1.45fr 1fr 1.1fr 0.95fr;
+  gap: 26px;
+  align-items: start;
+  padding: 38px 0 30px;
+}
+
+.footer-col {
+  min-height: 120px;
+}
+
+.site-footer .site-brand {
+  align-items: center;
+  gap: 12px;
+}
+
+.site-footer .site-brand-logo {
+  width: 96px;
+  height: 96px;
+}
+
+.site-footer .site-brand-copy {
+  margin-bottom: 0;
+  gap: 3px;
+}
+
+.site-footer .site-brand-toprow {
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.site-footer .site-brand-topline,
+.site-footer .site-brand-owner {
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  color: #dbeafe;
+}
+
+.site-footer .site-brand-title {
+  font-size: 1.52rem;
+  line-height: 1.02;
+}
+
+.footer-tagline {
+  margin: 14px 0 0;
+  max-width: 420px;
+  color: rgba(240, 248, 255, 0.96);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.footer-heading {
+  margin: 0 0 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffe3a3;
+  letter-spacing: 0.3px;
+}
+
+.footer-links-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link {
+  color: rgba(237, 247, 255, 0.96);
+  text-decoration: none;
+  font-size: 1.02rem;
+}
+
+.footer-link:hover {
+  color: #ffe8b5;
+  text-decoration: underline;
+}
+
+.footer-subheading {
+  margin: 14px 0 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f8d98f;
+  letter-spacing: 0.2px;
+}
+
+.footer-topic-wrap {
+  margin-top: 6px;
+}
+
+.footer-topic-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-topic-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 6px 11px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #ffecbf;
+  border: 1px solid rgba(255, 219, 140, 0.5);
+  background: rgba(255, 215, 136, 0.12);
+}
+
+.footer-contact-col {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 1.02rem;
+}
+
+.footer-contact-line {
+  color: rgba(236, 248, 255, 0.96);
+}
+
+.footer-social-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #fff4d6, #ffd98f);
+  color: #113967;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1rem;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
+}
+
+.footer-social-btn:hover {
+  transform: translateY(-2px);
+}
+
+.footer-note {
+  margin: 0;
+  font-size: 0.96rem;
+  color: rgba(232, 245, 255, 0.95);
+}
+
+.site-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.site-footer-bottom-inner {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 0;
+}
+
+.footer-copyright {
+  color: rgba(224, 241, 255, 0.95);
+  font-size: 0.96rem;
+}
+
+.footer-policy-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-policy-link {
+  color: #fff0cb;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-policy-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1100px) {
+  .site-nav {
+    display: none;
+  }
+
+  .site-header-top .site-header-inner {
+    justify-content: center;
+    gap: 18px;
+    padding: 20px 0;
+  }
+
+  .header-brand {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .header-logo-shell {
+    width: 132px;
+    height: 132px;
+  }
+
+  .header-brand-copy {
+    gap: 6px;
+  }
+
+  .header-brand-title {
+    font-size: 2.1rem;
+  }
+
+  .header-brand-subline {
+    font-size: 0.92rem;
+  }
+
+  .site-footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-top: 26px;
+  }
+
+  .footer-social-col {
+    align-items: flex-start;
+  }
+
+  .site-footer-bottom-inner {
+    flex-direction: column;
+    justify-content: center;
+    min-height: 78px;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .site-header-top .site-header-inner {
+    min-height: 160px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 14px 0;
+  }
+
+  .header-brand {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .header-logo-shell {
+    width: 98px;
+    height: 98px;
+    border-radius: 18px;
+  }
+
+  .header-brand-kicker {
+    min-height: 26px;
+    font-size: 0.72rem;
+    padding: 0 10px;
+  }
+
+  .header-brand-title {
+    font-size: 1.55rem;
+  }
+
+  .header-brand-subline {
+    font-size: 0.82rem;
+  }
+
+  .site-brand {
+    align-items: center;
+    gap: 10px;
+  }
+
+  .site-brand-copy {
+    margin-bottom: 0;
+    gap: 4px;
+  }
+
+  .site-brand-toprow {
+    gap: 8px;
+  }
+
+  .site-brand-topline {
+    font-size: 0.82rem;
+  }
+
+  .site-brand-title {
+    font-size: 1.25rem;
+  }
+
+  .site-brand-owner {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+
+  .site-header-actions {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .news-link {
+    font-size: 0.84rem;
+  }
+
+  .site-footer-inner {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .site-footer .site-brand-logo {
+    width: 78px;
+    height: 78px;
+  }
+
+  .site-footer .site-brand-title {
+    font-size: 1.28rem;
+  }
+
+  .footer-social-col {
+    align-items: flex-start;
+  }
+
+  .footer-social-list {
+    gap: 8px;
+  }
+}
+ .horoscope-download-btn {
+  /* 1. Tạo khoảng cách với lá số bên dưới */
+  margin-bottom: 80px; 
+
+  /* 2. Đẩy nút lên cao hơn (cách xa cái vạch kẻ ngang phía trên) */
+  margin-top: 15px; 
+
+  /* 3. Đảm bảo nút nằm giữa (nếu bạn muốn) */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Thêm một chút style cho nút trông chuyên nghiệp hơn (tùy chọn) */
+  padding: 8px 20px;
+  background-color: #2949bcfe; /* Màu xanh giống nút "Xem lá số" */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.horoscope-download-btn:hover {
+  background-color: #3a6cc4; /* Hiệu ứng khi di chuột vào */
+}

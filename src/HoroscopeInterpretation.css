@@ -1,0 +1,196 @@
+/* HoroscopeInterpretation.css - Sang trọng dễ đọc - Chữ LUẬN GIẢI SIÊU TO */
+
+/* Inter font dễ đọc */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Colors */
+:root {
+  --gold: #D4AF37;
+  --purple: #A78BFA;
+  --cream: #FDFBF5;
+  --white: #FFFFFF;
+  --dark: #1F2937;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  --shadow-hover: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+/* Main card */
+.interpretation-card {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  margin: 2rem auto;
+  max-width: 1100px;
+  padding: 2.5rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--dark);
+  line-height: 1.7;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Title buttons */
+.luxury-section-title-btn {
+  background: var(--white);
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 12px;
+  padding: 1.25rem 1.75rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--dark);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: left;
+}
+
+.luxury-section-title-btn:hover {
+  background: var(--cream);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+  border-color: var(--gold);
+}
+
+/* Sections */
+.luxury-section {
+  background: var(--white);
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.luxury-section:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+/* Luận giải blocks */
+.luxury-interpretation-block {
+  background: linear-gradient(145deg, #FFFFFF 0%, #F8FAFC 100%);
+  border: 2px solid rgba(229,231,235,0.5);
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+}
+
+/* Titles in blocks (h3 Luận chung, strong Sao) */
+.luxury-interpretation-block h3,
+.luxury-interpretation-block strong {
+  font-size: 1.4rem !important;
+  background: linear-gradient(to right, var(--gold), #F59E0B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.25rem !important;
+  font-weight: 700 !important;
+  padding: 0.75rem 0 !important;
+  border-bottom: 3px solid rgba(212,175,55,0.4);
+  letter-spacing: 0.5px;
+  display: block !important;
+}
+
+/* LUẬN GIẢI TEXT - CỰC TO 1.3rem */
+.luxury-interpretation-block p {
+  font-size: 2rem !important;
+  line-height: 1.85 !important;
+  color: var(--dark) !important;
+  margin-bottom: 1.5rem !important;
+  text-align: justify !important;
+}
+
+/* Bản Mệnh title */
+.luxury-banm-enh-content [style*="fontSize: 32"] {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  color: var(--dark) !important;
+  margin-bottom: 2rem !important;
+  text-align: center !important;
+  background: linear-gradient(to right, var(--purple), #C4B5FD);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Bản Mệnh nội dung */
+.luxury-banm-enh-content [style*="fontStyle: 'italic'"] {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.4rem !important;
+  line-height: 1.9 !important;
+  color: var(--dark) !important;
+  background: var(--white) !important;
+  border-left: 5px solid var(--purple) !important;
+  padding: 2.5rem !important;
+  border-radius: 0 16px 16px 0 !important;
+  box-shadow: var(--shadow) !important;
+  margin: 2rem 0 !important;
+}
+
+/* Cách cục */
+.luxury-special-pattern {
+  background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+  border: 3px solid var(--gold);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 12px 40px rgba(212,175,55,0.25);
+  position: relative;
+}
+
+.luxury-special-pattern::before {
+  content: '✦ Cách Cục Đặc Biệt ✦';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(212,175,55,0.4);
+}
+
+.luxury-special-pattern [style*="fontSize: 28"] {
+  color: #92400E !important;
+  font-size: 1.7rem !important;
+  font-weight: 800 !important;
+  text-align: center !important;
+  margin-bottom: 2.5rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px !important;
+}
+
+/* Responsive chữ vẫn to */
+@media (max-width: 768px) {
+  .interpretation-card {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .luxury-interpretation-block p {
+    font-size: 1.2rem !important;
+  }
+  
+  .luxury-banm-enh-content [style*="fontStyle: 'italic'"] {
+    font-size: 1.25rem !important;
+    padding: 2rem !important;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.content-block, .section-title {
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
