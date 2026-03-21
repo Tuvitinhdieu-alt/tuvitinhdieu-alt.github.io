@@ -1,0 +1,60 @@
+{
+  "featured": {
+    "title": "CUNG MỆNH - TỨ HÓA",
+    "cover": "/cungmenh.png",
+    "slug": "tu-hoa-cung-menh",
+    "id": "tu-hoa-cung-menh"
+  },
+  "latest": [
+    { "id": "tu-hoa-cung-menh", "title": "CUNG MỆNH - TỨ HÓA", "date": "15/3/2026", "thumb": "/posts/tuhoa-thumb.svg", "slug": "tu-hoa-cung-menh" },
+    { "id": "bai-chi-tiet-2", "title": "Bài chi tiết 2", "date": "12/3/2026", "thumb": "/posts/post2-thumb.svg", "slug": "bai-chi-tiet-2" },
+    { "id": "bai-chi-tiet-3", "title": "Bài chi tiết 3", "date": "05/3/2026", "thumb": "/posts/post3-thumb.svg", "slug": "bai-chi-tiet-3" }
+  ],
+  "categories": ["Tử Vi Tinh Diệu", "Kiến Thức Tử Vi", "Các Bộ Sao", "Phong Thủy", "Sức Khỏe"],
+  "posts": [
+    {
+      "id": "van-han-tuan",
+      "slug": "van-han-tuan",
+      "title": "Bài viết hàng ngày",
+      "date": "Tuần này",
+      "cover": "/cungmenh.png",
+      "thumb": "/posts/tuhoa-thumb.svg",
+      "images": [],
+      "excerpt": "Tổng quan các bài viết hàng ngày.",
+      "content": "<h3>Bài viết hàng ngày</h3><p>Đây là nội dung mẫu cho mục Bài viết hàng ngày. Cập nhật chi tiết theo chủ đề từng ngày.</p>"
+    },
+    {
+      "id": "tu-hoa-cung-menh",
+      "slug": "tu-hoa-cung-menh",
+      "title": "CUNG MỆNH - TỨ HÓA",
+      "date": "21/3/2026",
+      "cover": "/cungmenh.png",
+      "thumb": "/posts/tuhoa-thumb.svg",
+      "images": ["/posts/tuhoa-1.svg", "/posts/tuhoa-2.svg"],
+      "excerpt": "Giới thiệu ngắn về Tứ Hóa và cách ảnh hưởng đến cung mệnh.",
+      "file": "/posts/tu-hoa-cung-menh.md"
+    },
+    {
+      "id": "bai-chi-tiet-2",
+      "slug": "bai-chi-tiet-2",
+      "title": "Sao Thái Dương",
+      "date": "12/3/2026",
+      "cover": "/posts/post2-cover.svg",
+      "thumb": "/posts/post2-thumb.svg",
+      "images": [],
+      "excerpt": "Tóm tắt bài viết 2.",
+      "content": "<p>Nội dung mẫu bài 2.</p>"
+    },
+    {
+      "id": "bai-chi-tiet-3",
+      "slug": "bai-chi-tiet-3",
+      "title": "Bài chi tiết 3",
+      "date": "05/3/2026",
+      "cover": "/posts/post3-cover.svg",
+      "thumb": "/posts/post3-thumb.svg",
+      "images": [],
+      "excerpt": "Tóm tắt bài viết 3.",
+      "content": "<p>Nội dung mẫu bài 3.</p>"
+    }
+  ]
+}
